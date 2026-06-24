@@ -144,42 +144,42 @@ function search() {
 
     return `<div class="ad-card">
       <div>
-        <div class="ad-name">\${hl(a.n)}</div>
+        <div class="ad-name">${hl(a.n)}</div>
         <div class="ad-tags">
-          <span class="tag \${tc}">\${a.t}</span>
-          \${a.o ? `<span class="tag tag-obj">\${a.o}</span>` : ''}
-          <span class="tag tag-week">\${a.w}</span>
+          <span class="tag ${tc}">${a.t}</span>
+          ${a.o ? `<span class="tag tag-obj">${a.o}</span>` : ''}
+          <span class="tag tag-week">${a.w}</span>
         </div>
       </div>
       <div class="metrics">
         <div class="m-item">
           <div class="m-label">Spend</div>
-          <div class="m-val spend">฿\${a.s.toLocaleString()}</div>
+          <div class="m-val spend">฿${a.s.toLocaleString()}</div>
         </div>
         <div class="m-item">
           <div class="m-label">CTR</div>
-          <div class="m-val \${ctrCls}">\${ctrVal ?? '–'}</div>
+          <div class="m-val ${ctrCls}">${ctrVal ?? '–'}</div>
         </div>
         <div class="m-item">
           <div class="m-label">CPM</div>
-          <div class="m-val">\${cpmVal ?? '–'}</div>
+          <div class="m-val">${cpmVal ?? '–'}</div>
         </div>
         <div class="m-item">
           <div class="m-label">Cost/PE</div>
-          <div class="m-val">\${peVal ?? '–'}</div>
+          <div class="m-val">${peVal ?? '–'}</div>
         </div>
         <div class="m-item">
           <div class="m-label">Cost/DM</div>
-          <div class="m-val">\${dmVal ?? '–'}</div>
+          <div class="m-val">${dmVal ?? '–'}</div>
         </div>
-        \${a.r ? `<div class="m-item"><div class="m-label">Reach</div><div class="m-val">\${a.r.toLocaleString()}</div></div>` : '<div></div>'}
+        ${a.r ? `<div class="m-item"><div class="m-label">Reach</div><div class="m-val">${a.r.toLocaleString()}</div></div>` : '<div></div>'}
       </div>
     </div>`;
   }).join('');
 
   if (res.length > 120) {
     container.insertAdjacentHTML('beforeend',
-      `<div class="more-note">แสดง 120 จาก \${res.length} — พิมพ์ให้เจาะจงขึ้น</div>`);
+      `<div class="more-note">แสดง 120 จาก ${res.length} — พิมพ์ให้เจาะจงขึ้น</div>`);
   }
 }
 </script>
