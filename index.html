@@ -142,12 +142,12 @@ function search() {
     const cpmVal = a.cpm != null ? '฿' + a.cpm.toFixed(0) : null;
     const peVal  = a.pe != null ? '฿' + a.pe.toFixed(2) : null;
 
-    return \`<div class="ad-card">
+    return `<div class="ad-card">
       <div>
         <div class="ad-name">\${hl(a.n)}</div>
         <div class="ad-tags">
           <span class="tag \${tc}">\${a.t}</span>
-          \${a.o ? \`<span class="tag tag-obj">\${a.o}</span>\` : ''}
+          \${a.o ? `<span class="tag tag-obj">\${a.o}</span>` : ''}
           <span class="tag tag-week">\${a.w}</span>
         </div>
       </div>
@@ -172,14 +172,14 @@ function search() {
           <div class="m-label">Cost/DM</div>
           <div class="m-val">\${dmVal ?? '–'}</div>
         </div>
-        \${a.r ? \`<div class="m-item"><div class="m-label">Reach</div><div class="m-val">\${a.r.toLocaleString()}</div></div>\` : '<div></div>'}
+        \${a.r ? `<div class="m-item"><div class="m-label">Reach</div><div class="m-val">\${a.r.toLocaleString()}</div></div>` : '<div></div>'}
       </div>
-    </div>\`;
+    </div>`;
   }).join('');
 
   if (res.length > 120) {
     container.insertAdjacentHTML('beforeend',
-      \`<div class="more-note">แสดง 120 จาก \${res.length} — พิมพ์ให้เจาะจงขึ้น</div>\`);
+      `<div class="more-note">แสดง 120 จาก \${res.length} — พิมพ์ให้เจาะจงขึ้น</div>`);
   }
 }
 </script>
